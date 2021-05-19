@@ -22,7 +22,8 @@ FILL(2)
 POUR(2,1)
 
 题解：
-  一共6种情况，bfs
+  一共6种情况，遍历每种情况，队列为空时impossible
+  as[i][j][k]代表a-iL,b-jL,k多少操作
 */
 
 
@@ -35,7 +36,7 @@ const int maxn = 1e5+100;
 int A,B,C;
 int head,tail;
 int book[120][120];
-int as[120][120][120];//a-iL,b-jL,k多少操作
+int as[120][120][120];
 struct node
 {
 	int x,y;
